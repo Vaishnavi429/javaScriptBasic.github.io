@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    
+    // runtime error
+    //compile time error
+    // try {
+    //     code with probable run time error
+    // }catch(err){
+    //     if any error exist it will be catch by catch block
+    // }
+    //finally-run both case
+    //throw -can be used to create and report user defined error
+    
+    let number =Number(prompt('enter a number'))
+    try{
+        if(number<0){
+            throw new Error ('input number cannot be negative')
+
+        }
+    }catch(err){
+        console.log(err);
+            
+        }
+        
+
+    </script>
+</body>
+</html>

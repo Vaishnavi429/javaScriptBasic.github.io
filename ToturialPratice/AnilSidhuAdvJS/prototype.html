@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Object.prototype.myAppData = "this is a sample protptype",
+        Object.prototype.myData = function(){
+            return "custom function"
+        }
+        String.prototype.customLength = function(){
+            return this.length+2
+        }
+        let users={
+            getFullName: function () {
+                return this.name + " " + this.lastName
+            },
+            getAge:function(){
+                let age = new Date().getFullYear()-this.birth
+                return age;
+            }
+
+        }
+        let student = {
+            name: 'vaishnavi',
+            lastName: 'gupta',
+            birth:2000,
+            // getAge:users.getAge
+           
+        }
+        let teacher = {
+            name: 'Anil',
+            lastName: 'sidhu',
+            birth:1980,
+            // getAge:users.getAge
+
+        }
+        teacher.__proto__ = users;
+        student.__proto__= users
+        console.log(student.getFullName());
+        console.log(student.getAge());
+
+        console.log(teacher.getFullName());
+        console.log(teacher.getAge());
+
+
+
+    </script>
+</body>
+
+</html>

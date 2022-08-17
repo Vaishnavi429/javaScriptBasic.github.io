@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <h1>Generator Function</h1>
+   <h1>New Dynamic Id:<span id="newId"></span></h1>
+   <button onclick="setNewId()">Generator new ID</button>
+
+    <script>
+        function* simpleGenerator(){
+        let i=100;
+        while(true){
+            i++;
+            yield i;
+        }
+        }
+        let sG=simpleGenerator()
+        
+        function setNewId(){
+        document.getElementById("newId").innerText=sG.next().value
+         
+        }
+        
+
+
+
+    </script>
+</body>
+</html>

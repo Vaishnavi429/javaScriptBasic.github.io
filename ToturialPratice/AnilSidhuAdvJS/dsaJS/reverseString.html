@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [] 
+        let arraySize = arr.length;
+
+        function push(newData){
+            arr[arraySize] = newData
+            arraySize+=1;
+        }
+        function pop(){
+            arraySize-=1;
+            arr.length = arraySize
+        }
+        // push(20)
+        // push(24)
+        // push(34)
+        // pop()
+       
+        // console.log(arr);
+        let str = "vaish"
+        str =  str.split('')
+        console.log(str);
+    </script>
+</body>
+</html>

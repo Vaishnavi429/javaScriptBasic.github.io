@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call,apply,bind</title>
+</head>
+<body>
+    
+
+    <script>
+        // javascrip function method 
+        //   function Display(){
+        //       return `${this.firstName} ${this.lastName}`
+        //   } 
+          function wish(user){
+              return `${user} ${this.firstName} ${this.lastName}`
+          } 
+
+          let vaishnavi={
+              firstName:'Vaishnavi',
+              lastName:'Gupta'
+          }
+
+        //   console.log(Display.call(vaishnavi));
+        //   console.log(wish.call(vaishnavi,'Good Morning'));
+            
+
+
+        //   let displayName=Display.bind(vaishnavi)
+        //   console.log(displayName());
+
+
+
+        console.log(wish.apply(vaishnavi,['good morning']));
+
+
+
+
+    </script>
+</body>
+</html>

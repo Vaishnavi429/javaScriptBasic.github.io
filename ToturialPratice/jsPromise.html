@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const studentData = [
+        //     {
+        //         name: 'shewta',
+        //         batch: 10
+        //     },
+        //     {
+        //         name: 'satyam',
+        //         batch: 9
+        //     },
+        //     {
+        //         name: 'rishabh',
+        //         batch: 11
+        //     },
+        //     {
+        //         name: 'vaishnavi',
+        //         batch: 10
+        //     },
+        //     {
+        //         name: 'abhishek',
+        //         batch: 9
+        //     }
+        // ]
+
+        // const fetchStudentDataApiPromise = () => {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(studentData)
+        //         }, 5000)
+        //     })
+        // }
+
+//promise chaining
+
+
+//   const fetchStudentData=()=>{
+//     fetchStudentDataApiPromise()
+//     .then((res)=>{
+//         return res
+//     })
+//     .then((res)=>{
+//        return res.filter(student=>student.batch=== 10)
+//     }).then((res)=>{
+//         console.log(res);
+//     })
+//     .catch((rej)=>{
+//         console.log(rej);
+//     })
+//   }
+
+
+
+
+
+
+  let promise = new Promise((resolve,reject)=>{
+      resolve('A')
+  })
+promise.then(res=>{
+    return res+'B'
+}).then(res=>{
+    return res+'C'
+}).then(res=>{
+    console.log(res);
+}).catch(rej=>{
+    console.log(rej);
+})
+
+// /*
+// problem statement -fetch data from and hen process it (both are syns)
+// create 2 promise -1 fetch data from server 2.processData*/
+
+// const fechDataFromServer =()=>{
+//     console.log("proceessing data now from server...");
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             resolve('Data fetched')
+//         },6000)
+//     })
+// }
+
+//     const processData =()=>{
+//     console.log("proceessing data now...");
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             resolve('Data processed')
+//         },4000)
+//     })
+//     }
+    
+//     fechDataFromServer().then((res)=>{
+//         console.log(res);
+//         return processData()
+//     }).then((res)=>{
+//         console.log(res);
+//     }).catch((rej)=>{
+//         console.log(rej);
+//     })
+
+
+
+
+
+
+
+
+
+    </script>
+    <button onclick="fetchStudentData()">fetch Data</button>
+</body>
+
+</html>
